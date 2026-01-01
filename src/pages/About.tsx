@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Target, Lightbulb, Users, Award } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import ceoImage from "@/assets/ceo-founder.png";
+import ctoImage from "@/assets/cto-founder.png";
 
 const values = [
   {
@@ -27,10 +29,8 @@ const values = [
 ];
 
 const team = [
-  { name: "Dr. Alexandra Kim", role: "CEO & Founder", specialty: "AI Strategy" },
-  { name: "Marcus Chen", role: "CTO", specialty: "Machine Learning" },
-  { name: "Priya Sharma", role: "Head of Research", specialty: "NLP" },
-  { name: "James Wilson", role: "Lead Engineer", specialty: "Computer Vision" },
+  { name: "CEO Name", role: "CEO & Founder", specialty: "AI Strategy", image: ceoImage },
+  { name: "CTO Name", role: "CTO & Founder", specialty: "Machine Learning", image: ctoImage },
 ];
 
 const About = () => {
@@ -173,7 +173,7 @@ const About = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               {team.map((member, index) => (
                 <motion.div
                   key={member.name}
@@ -183,10 +183,12 @@ const About = () => {
                   transition={{ delay: index * 0.1 }}
                   className="group p-6 rounded-2xl glass gradient-border text-center hover:bg-secondary/50 transition-all duration-300"
                 >
-                  <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-primary to-glow-secondary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="font-display font-bold text-2xl text-primary-foreground">
-                      {member.name.split(" ").map(n => n[0]).join("")}
-                    </span>
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 group-hover:scale-110 transition-transform duration-300 ring-4 ring-primary/30">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h3 className="font-display text-lg font-semibold text-foreground">
                     {member.name}
