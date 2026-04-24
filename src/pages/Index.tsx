@@ -24,15 +24,6 @@ const Index = () => {
         <Technologies />
         <Testimonials />
         <CTA />
-      </Layout>
-      </Helmet>
-      <Layout>
-        <Hero />
-        <Services />
-        <Technologies />
-        <Testimonials />
-        <CTA />
-      </Layout>
     </>
   );
 };
