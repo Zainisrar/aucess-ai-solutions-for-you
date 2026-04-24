@@ -24,6 +24,7 @@ const Index = () => {
         <Technologies />
         <Testimonials />
         <CTA />
+      </Layout>
     </>
   );
 };
