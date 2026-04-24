@@ -1,44 +1,44 @@
 import { motion } from "framer-motion";
-import { Brain, Eye, MessageSquare, TrendingUp, Cpu, Shield } from "lucide-react";
+import { Eye, ScanFace, Boxes, Camera, Activity, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: Brain,
-    title: "Machine Learning",
-    description:
-      "Custom ML models trained on your data to solve complex business problems and drive intelligent automation.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Natural Language Processing",
-    description:
-      "Advanced NLP solutions for chatbots, sentiment analysis, document processing, and language understanding.",
-  },
-  {
     icon: Eye,
-    title: "Computer Vision",
+    title: "Object Detection",
     description:
-      "Image recognition, object detection, and visual analytics that bring intelligence to visual data.",
+      "Real-time detection and localization of objects across images and video streams with high precision.",
   },
   {
-    icon: TrendingUp,
-    title: "Predictive Analytics",
+    icon: ScanFace,
+    title: "Facial Recognition",
     description:
-      "Data-driven forecasting and analytics that help you make informed decisions and stay ahead.",
+      "Secure, accurate facial recognition and verification for identity, access, and personalization.",
   },
   {
-    icon: Cpu,
-    title: "AI Integration",
+    icon: Boxes,
+    title: "Image Segmentation",
     description:
-      "Seamless integration of AI capabilities into your existing systems and workflows.",
+      "Pixel-level segmentation that separates and classifies every region of an image with clarity.",
   },
   {
-    icon: Shield,
-    title: "AI Security",
+    icon: Camera,
+    title: "Video Analytics",
     description:
-      "Robust AI-powered security solutions to protect your data and systems from threats.",
+      "Analyze live and recorded video to extract insights, track activity, and monitor events at scale.",
+  },
+  {
+    icon: Activity,
+    title: "Quality Inspection",
+    description:
+      "Automated visual inspection for manufacturing, catching defects faster than the human eye.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Surveillance & Safety",
+    description:
+      "Intelligent surveillance systems that detect anomalies, intrusions, and safety incidents in real time.",
   },
 ];
 
@@ -55,10 +55,10 @@ const Services = () => {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            Our <span className="text-gradient">Services</span>
+            Our <span className="text-gradient">Vision Solutions</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Comprehensive AI solutions tailored to transform your business and unlock new opportunities.
+            End-to-end computer vision capabilities engineered to turn pixels into actionable intelligence.
           </p>
         </motion.div>
 
@@ -93,7 +93,7 @@ const Services = () => {
           className="text-center mt-12"
         >
           <Button variant="hero" size="lg" asChild>
-            <Link to="/services">View All Services</Link>
+            <Link to="/services">View All Solutions</Link>
           </Button>
         </motion.div>
       </div>

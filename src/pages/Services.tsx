@@ -1,58 +1,58 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { ArrowRight, Brain, Eye, MessageSquare, TrendingUp, Cpu, Shield, Workflow, Database } from "lucide-react";
+import { ArrowRight, Eye, ScanFace, Boxes, Camera, Activity, ShieldCheck, Car, Stethoscope } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: Brain,
-    title: "Machine Learning Solutions",
-    description: "Custom ML models designed for your specific business needs, from recommendation systems to fraud detection.",
-    features: ["Custom Model Development", "Model Training & Optimization", "MLOps & Deployment", "Continuous Learning"],
-  },
-  {
-    icon: MessageSquare,
-    title: "Natural Language Processing",
-    description: "Advanced NLP solutions that understand, interpret, and generate human language with remarkable accuracy.",
-    features: ["Chatbots & Virtual Assistants", "Sentiment Analysis", "Document Processing", "Language Translation"],
-  },
-  {
     icon: Eye,
-    title: "Computer Vision",
-    description: "Visual AI that can see, understand, and analyze images and videos for actionable insights.",
-    features: ["Object Detection", "Facial Recognition", "Quality Inspection", "Medical Imaging"],
+    title: "Object Detection & Tracking",
+    description: "Detect, classify, and track objects in real time across images and video streams.",
+    features: ["YOLO & DETR Models", "Multi-object Tracking", "Edge Deployment", "Custom Training"],
   },
   {
-    icon: TrendingUp,
-    title: "Predictive Analytics",
-    description: "Data-driven predictions that help you anticipate trends, behaviors, and outcomes.",
-    features: ["Demand Forecasting", "Risk Assessment", "Customer Behavior", "Market Analysis"],
+    icon: ScanFace,
+    title: "Facial Recognition",
+    description: "Secure facial recognition and verification with industry-leading accuracy and liveness detection.",
+    features: ["Face Verification", "Liveness Detection", "Identity Matching", "Privacy-first Design"],
   },
   {
-    icon: Cpu,
-    title: "AI Integration",
-    description: "Seamlessly integrate AI capabilities into your existing systems and workflows.",
-    features: ["API Development", "Legacy System Integration", "Cloud Migration", "Real-time Processing"],
+    icon: Boxes,
+    title: "Image Segmentation",
+    description: "Pixel-accurate semantic and instance segmentation for granular visual understanding.",
+    features: ["Semantic Segmentation", "Instance Segmentation", "Panoptic Models", "Mask R-CNN"],
   },
   {
-    icon: Shield,
-    title: "AI Security",
-    description: "Protect your systems and data with AI-powered security solutions.",
-    features: ["Threat Detection", "Anomaly Detection", "Fraud Prevention", "Access Control"],
+    icon: Camera,
+    title: "Video Analytics",
+    description: "Extract events, behaviors, and insights from live and recorded video at scale.",
+    features: ["Event Detection", "Behavior Analysis", "Heatmaps", "People Counting"],
   },
   {
-    icon: Workflow,
-    title: "Process Automation",
-    description: "Intelligent automation that streamlines operations and reduces manual work.",
-    features: ["Workflow Automation", "Document Processing", "Email Classification", "Data Entry"],
+    icon: Activity,
+    title: "Industrial Quality Inspection",
+    description: "Automated defect detection on production lines using high-speed visual inspection.",
+    features: ["Defect Detection", "Anomaly Detection", "Surface Inspection", "Assembly Verification"],
   },
   {
-    icon: Database,
-    title: "Data Engineering",
-    description: "Build robust data pipelines and infrastructure to power your AI initiatives.",
-    features: ["Data Pipeline Design", "ETL Processes", "Data Warehousing", "Real-time Streaming"],
+    icon: ShieldCheck,
+    title: "Smart Surveillance",
+    description: "Intelligent surveillance with anomaly, intrusion, and safety incident detection.",
+    features: ["Intrusion Alerts", "PPE Compliance", "Crowd Analytics", "License Plate Recognition"],
+  },
+  {
+    icon: Stethoscope,
+    title: "Medical Imaging",
+    description: "AI-assisted analysis of X-rays, MRIs, CT scans, and pathology slides.",
+    features: ["Lesion Detection", "Organ Segmentation", "DICOM Pipelines", "Clinical Validation"],
+  },
+  {
+    icon: Car,
+    title: "Autonomous Vision",
+    description: "Perception systems for autonomous vehicles, drones, and robotics platforms.",
+    features: ["Lane Detection", "Depth Estimation", "SLAM Integration", "Sensor Fusion"],
   },
 ];
 
@@ -60,10 +60,10 @@ const ServicesPage = () => {
   return (
     <>
       <Helmet>
-        <title>AI Services - Machine Learning, NLP, Computer Vision | Aucess</title>
+        <title>Computer Vision Services - Detection, Segmentation, Video Analytics | Aucess</title>
         <meta
           name="description"
-          content="Explore our comprehensive AI services including Machine Learning, NLP, Computer Vision, Predictive Analytics, and more. Custom solutions for your business."
+          content="Explore Aucess computer vision services: object detection, facial recognition, image segmentation, video analytics, quality inspection, medical imaging, and more."
         />
       </Helmet>
       <Layout>
@@ -78,11 +78,11 @@ const ServicesPage = () => {
               className="max-w-3xl mx-auto text-center"
             >
               <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-                Our <span className="text-gradient">Services</span>
+                Our <span className="text-gradient">Vision Services</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                Comprehensive AI solutions tailored to transform every aspect of your business
-                and unlock unprecedented growth opportunities.
+                Production-grade computer vision solutions, custom-built to give your business eyes that
+                see, understand, and act.
               </p>
             </motion.div>
           </div>
@@ -136,11 +136,11 @@ const ServicesPage = () => {
               className="max-w-3xl mx-auto text-center glass rounded-3xl p-12 gradient-border"
             >
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-                Need a Custom <span className="text-gradient">Solution?</span>
+                Need a Custom <span className="text-gradient">Vision Solution?</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Our team of AI experts is ready to discuss your unique requirements and build
-                a tailored solution that fits your business perfectly.
+                Our computer vision engineers are ready to discuss your use case and design a tailored
+                pipeline that fits your environment, hardware, and goals.
               </p>
               <Button variant="hero" size="xl" asChild>
                 <Link to="/contact">

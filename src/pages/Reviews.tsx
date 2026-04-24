@@ -8,15 +8,15 @@ const testimonials = [
     name: "Sarah Chen",
     role: "CTO",
     company: "TechVentures",
-    content: "Aucess transformed our data processing pipeline with their AI solutions. The results exceeded our expectations - 40% faster processing and 99% accuracy. Their team's expertise is unmatched.",
+    content: "Aucess deployed a real-time object detection pipeline that boosted throughput by 40% with 99% accuracy. Their computer vision expertise is unmatched.",
     rating: 5,
     industry: "Technology",
   },
   {
     name: "Michael Rodriguez",
     role: "CEO",
-    company: "HealthTech Inc",
-    content: "Their NLP solution revolutionized our patient communication system. The team's expertise and dedication to quality is truly exceptional. We've seen a 60% reduction in response time.",
+    company: "MedScan Inc",
+    content: "Their medical imaging models transformed our diagnostic workflow. Lesion detection accuracy and turnaround time both improved dramatically.",
     rating: 5,
     industry: "Healthcare",
   },
@@ -24,39 +24,39 @@ const testimonials = [
     name: "Emily Watson",
     role: "Director of Innovation",
     company: "RetailCo",
-    content: "The predictive analytics platform Aucess built for us has been a game-changer. We've seen a 25% increase in sales through better inventory management and demand forecasting.",
+    content: "The in-store video analytics platform Aucess built tracks shopper behavior with remarkable precision and lifted conversions by 25%.",
     rating: 5,
     industry: "Retail",
   },
   {
     name: "David Park",
     role: "VP of Engineering",
-    company: "FinServe Global",
-    content: "Aucess delivered an exceptional fraud detection system. Their AI solution catches 99.7% of fraudulent transactions while maintaining minimal false positives. Outstanding work.",
+    company: "SecureSight",
+    content: "Their smart surveillance system catches anomalies in real time with minimal false positives. Outstanding computer vision engineering.",
     rating: 5,
-    industry: "Finance",
+    industry: "Security",
   },
   {
     name: "Amanda Foster",
     role: "Head of Operations",
     company: "LogiTech Solutions",
-    content: "The computer vision system they built for our quality control has reduced defects by 80%. The ROI was evident within the first quarter. Highly recommend their services.",
+    content: "The visual quality inspection system they built reduced defects by 80%. ROI was clear within the first quarter — highly recommend.",
     rating: 5,
     industry: "Manufacturing",
   },
   {
     name: "Robert Kim",
-    role: "Chief Data Officer",
-    company: "MediaMax",
-    content: "Their recommendation engine increased user engagement by 45%. Aucess truly understands how to leverage AI for business growth. A pleasure to work with from start to finish.",
+    role: "Chief Technology Officer",
+    company: "AutoDrive",
+    content: "Aucess delivered a robust perception stack for our autonomous fleet — lane detection, depth, and tracking all working flawlessly.",
     rating: 5,
-    industry: "Media",
+    industry: "Automotive",
   },
 ];
 
 const stats = [
-  { value: "150+", label: "Projects Completed" },
-  { value: "98%", label: "Client Satisfaction" },
+  { value: "150+", label: "Vision Projects Delivered" },
+  { value: "99.7%", label: "Detection Accuracy" },
   { value: "50+", label: "Enterprise Clients" },
   { value: "4.9/5", label: "Average Rating" },
 ];
@@ -65,10 +65,10 @@ const ReviewsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Client Reviews & Testimonials | Aucess AI Solutions</title>
+        <title>Client Reviews & Testimonials | Aucess Computer Vision</title>
         <meta
           name="description"
-          content="Read what our clients say about Aucess AI solutions. Discover how we've helped businesses across industries achieve remarkable results."
+          content="Read what our clients say about Aucess computer vision solutions. See how we've helped businesses across industries deploy vision AI."
         />
       </Helmet>
       <Layout>
@@ -87,7 +87,7 @@ const ReviewsPage = () => {
               </h1>
               <p className="text-xl text-muted-foreground">
                 Don't just take our word for it. Hear from the businesses we've helped
-                transform with our AI solutions.
+                transform with our computer vision solutions.
               </p>
             </motion.div>
           </div>
@@ -183,10 +183,10 @@ const ReviewsPage = () => {
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12">
                 From startups to Fortune 500 companies, businesses trust Aucess to deliver
-                AI solutions that make a difference.
+                computer vision solutions that make a difference.
               </p>
               <div className="flex flex-wrap justify-center gap-8 opacity-60">
-                {["TechVentures", "HealthTech Inc", "RetailCo", "FinServe Global", "LogiTech", "MediaMax"].map((company) => (
+                {["TechVentures", "MedScan Inc", "RetailCo", "SecureSight", "LogiTech", "AutoDrive"].map((company) => (
                   <div
                     key={company}
                     className="px-8 py-4 rounded-xl bg-secondary/50 font-display font-semibold text-muted-foreground"

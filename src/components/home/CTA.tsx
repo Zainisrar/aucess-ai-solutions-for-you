@@ -19,12 +19,12 @@ const CTA = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your Business with{" "}
-            <span className="text-gradient">AI?</span>
+            Ready to Give Your Business{" "}
+            <span className="text-gradient">Sight?</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-10">
-            Let's discuss how Aucess can help you leverage the power of artificial
-            intelligence to achieve your goals.
+            Let's discuss how Aucess can deploy computer vision to automate inspection,
+            unlock visual insights, and transform how you operate.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="xl" asChild>

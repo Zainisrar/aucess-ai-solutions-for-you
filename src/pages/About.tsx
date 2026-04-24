@@ -29,18 +29,18 @@ const values = [
 ];
 
 const team = [
-  { name: "CEO Name", role: "CEO & Founder", specialty: "AI Strategy", image: ceoImage },
-  { name: "CTO Name", role: "CTO & Founder", specialty: "Machine Learning", image: ctoImage },
+  { name: "CEO Name", role: "CEO & Founder", specialty: "Vision Strategy", image: ceoImage },
+  { name: "CTO Name", role: "CTO & Founder", specialty: "Computer Vision", image: ctoImage },
 ];
 
 const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Aucess - Pioneering AI Innovation</title>
+        <title>About Aucess - Pioneering Computer Vision</title>
         <meta
           name="description"
-          content="Learn about Aucess, our mission to democratize AI, and the expert team behind our cutting-edge solutions."
+          content="Learn about Aucess, our mission to make computer vision accessible, and the expert team behind our cutting-edge vision solutions."
         />
       </Helmet>
       <Layout>
@@ -58,8 +58,8 @@ const About = () => {
                 About <span className="text-gradient">Aucess</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                We're on a mission to democratize artificial intelligence and make its
-                transformative power accessible to businesses of all sizes.
+                We're on a mission to make computer vision accessible — giving every business the
+                power to see, understand, and act on visual data.
               </p>
             </motion.div>
           </div>
