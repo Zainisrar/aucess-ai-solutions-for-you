@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 
 const technologies = [
-  { name: "TensorFlow", category: "ML Framework" },
-  { name: "PyTorch", category: "ML Framework" },
-  { name: "OpenAI GPT", category: "Large Language Model" },
-  { name: "Google Cloud AI", category: "Cloud Platform" },
-  { name: "AWS SageMaker", category: "Cloud Platform" },
-  { name: "Hugging Face", category: "NLP Models" },
+  { name: "OpenCV", category: "Vision Library" },
+  { name: "PyTorch", category: "Deep Learning" },
+  { name: "TensorFlow", category: "Deep Learning" },
+  { name: "YOLO", category: "Object Detection" },
+  { name: "Detectron2", category: "Segmentation" },
+  { name: "MediaPipe", category: "Real-time Vision" },
   { name: "NVIDIA CUDA", category: "GPU Computing" },
-  { name: "Kubernetes", category: "Orchestration" },
+  { name: "ONNX Runtime", category: "Model Deployment" },
 ];
 
 const Technologies = () => {
@@ -24,10 +24,10 @@ const Technologies = () => {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            Powered by <span className="text-gradient">Leading Technologies</span>
+            Powered by <span className="text-gradient">Leading Vision Tech</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            We leverage the most advanced AI frameworks and platforms to deliver exceptional results.
+            We build on best-in-class computer vision frameworks and accelerators to ship reliable, production-grade systems.
           </p>
         </motion.div>
 

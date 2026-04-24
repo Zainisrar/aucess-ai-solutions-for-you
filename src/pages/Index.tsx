@@ -10,10 +10,10 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Aucess - AI-Powered Solutions for Tomorrow's Challenges</title>
+        <title>Aucess - Computer Vision Solutions for Modern Business</title>
         <meta
           name="description"
-          content="Aucess delivers cutting-edge artificial intelligence solutions that transform businesses, automate processes, and unlock new possibilities. Machine Learning, NLP, Computer Vision & more."
+          content="Aucess delivers cutting-edge computer vision solutions: object detection, facial recognition, image segmentation, video analytics, quality inspection, and more."
         />
       </Helmet>
       <Layout>

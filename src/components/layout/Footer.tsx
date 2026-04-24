@@ -15,7 +15,7 @@ const Footer = () => {
               <span className="font-display font-bold text-2xl text-foreground">Aucess</span>
             </Link>
             <p className="text-muted-foreground">
-              Pioneering the future with intelligent AI solutions that transform businesses worldwide.
+              Pioneering the future with intelligent computer vision solutions that transform businesses worldwide.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
@@ -52,11 +52,11 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-foreground">Services</h4>
             <ul className="space-y-2">
               {[
-                "Machine Learning",
-                "Natural Language Processing",
-                "Computer Vision",
-                "Predictive Analytics",
-                "AI Consulting",
+                "Object Detection",
+                "Facial Recognition",
+                "Image Segmentation",
+                "Video Analytics",
+                "Quality Inspection",
               ].map((service) => (
                 <li key={service}>
                   <Link

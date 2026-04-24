@@ -6,21 +6,21 @@ const testimonials = [
     name: "Sarah Chen",
     role: "CTO, TechVentures",
     content:
-      "Aucess transformed our data processing pipeline with their AI solutions. The results exceeded our expectations - 40% faster processing and 99% accuracy.",
+      "Aucess deployed a real-time object detection pipeline that boosted our throughput by 40% while maintaining 99% accuracy. Outstanding vision engineering.",
     rating: 5,
   },
   {
     name: "Michael Rodriguez",
-    role: "CEO, HealthTech Inc",
+    role: "CEO, MedScan Inc",
     content:
-      "Their NLP solution revolutionized our patient communication system. The team's expertise and dedication to quality is truly exceptional.",
+      "Their medical imaging models transformed our diagnostic workflow. The team's depth in computer vision is truly exceptional.",
     rating: 5,
   },
   {
     name: "Emily Watson",
-    role: "Director of Innovation, RetailCo",
+    role: "Director of Operations, RetailCo",
     content:
-      "The predictive analytics platform Aucess built for us has been a game-changer. We've seen a 25% increase in sales through better inventory management.",
+      "The video analytics platform Aucess built tracks shopper behavior in-store with remarkable precision — a complete game-changer for us.",
     rating: 5,
   },
 ];
@@ -41,7 +41,7 @@ const Testimonials = () => {
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Don't just take our word for it - hear from the businesses we've helped transform.
+            Hear from teams who've put our computer vision solutions to work.
           </p>
         </motion.div>
 

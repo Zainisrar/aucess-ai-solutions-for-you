@@ -2,16 +2,21 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroVideo from "@/assets/hero-video.webm";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={heroVideo} type="video/webm" />
+      </video>
       <div className="absolute inset-0 bg-background/70" />
 
       {/* Background Effects */}
@@ -34,7 +39,7 @@ const Hero = () => {
           >
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
-              Next-Generation AI Solutions
+              Next-Generation Computer Vision
             </span>
           </motion.div>
 
@@ -45,8 +50,8 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
-            Empowering Tomorrow with{" "}
-            <span className="text-gradient">Intelligent AI</span>
+            See the World with{" "}
+            <span className="text-gradient">Intelligent Vision</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -56,8 +61,8 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto"
           >
-            Aucess delivers cutting-edge artificial intelligence solutions that
-            transform businesses, automate processes, and unlock new possibilities.
+            Aucess delivers state-of-the-art computer vision solutions that detect,
+            recognize, and analyze visual data to power smarter decisions.
           </motion.p>
 
           {/* CTAs */}
@@ -74,7 +79,7 @@ const Hero = () => {
               </Link>
             </Button>
             <Button variant="hero-outline" size="xl" asChild>
-              <Link to="/services">Explore Services</Link>
+              <Link to="/services">Explore Solutions</Link>
             </Button>
           </motion.div>
 
@@ -86,9 +91,9 @@ const Hero = () => {
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { value: "150+", label: "Projects Delivered" },
-              { value: "98%", label: "Client Satisfaction" },
-              { value: "50+", label: "AI Experts" },
+              { value: "150+", label: "Vision Models Deployed" },
+              { value: "99.7%", label: "Detection Accuracy" },
+              { value: "50+", label: "Vision Experts" },
               { value: "24/7", label: "Support Available" },
             ].map((stat, index) => (
               <div key={index} className="text-center">

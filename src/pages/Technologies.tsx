@@ -4,39 +4,39 @@ import Layout from "@/components/layout/Layout";
 
 const techCategories = [
   {
-    title: "Machine Learning Frameworks",
+    title: "Vision Frameworks & Libraries",
     technologies: [
-      { name: "TensorFlow", description: "Google's open-source ML framework for production-grade applications" },
-      { name: "PyTorch", description: "Facebook's flexible deep learning platform for research and deployment" },
-      { name: "Scikit-learn", description: "Essential Python library for classical machine learning algorithms" },
-      { name: "Keras", description: "High-level neural network API for rapid prototyping" },
+      { name: "OpenCV", description: "The de-facto open-source library for classical computer vision" },
+      { name: "PyTorch", description: "Flexible deep learning framework powering modern vision research" },
+      { name: "TensorFlow", description: "Production-grade ML framework with rich vision tooling" },
+      { name: "MediaPipe", description: "Google's cross-platform real-time perception pipelines" },
     ],
   },
   {
-    title: "Large Language Models",
+    title: "Detection & Segmentation Models",
     technologies: [
-      { name: "GPT-4", description: "OpenAI's most advanced language model for complex reasoning" },
-      { name: "Claude", description: "Anthropic's safe and helpful AI assistant" },
-      { name: "LLaMA", description: "Meta's open-source foundation models" },
-      { name: "Gemini", description: "Google's multimodal AI model" },
+      { name: "YOLOv8", description: "State-of-the-art real-time object detection" },
+      { name: "Detectron2", description: "Meta's modular detection and segmentation library" },
+      { name: "SAM", description: "Segment Anything — universal image segmentation" },
+      { name: "DINOv2", description: "Self-supervised vision foundation model" },
     ],
   },
   {
-    title: "Cloud Platforms",
+    title: "Deployment & Acceleration",
     technologies: [
-      { name: "AWS SageMaker", description: "Amazon's fully managed ML service" },
-      { name: "Google Cloud AI", description: "Google's suite of AI and ML services" },
-      { name: "Azure ML", description: "Microsoft's enterprise ML platform" },
-      { name: "Vertex AI", description: "Unified ML development platform" },
+      { name: "NVIDIA CUDA", description: "GPU computing platform for accelerated training and inference" },
+      { name: "TensorRT", description: "High-performance deep learning inference on NVIDIA GPUs" },
+      { name: "ONNX Runtime", description: "Cross-platform model inference and optimization" },
+      { name: "OpenVINO", description: "Intel's toolkit for optimized vision inference at the edge" },
     ],
   },
   {
-    title: "Infrastructure & DevOps",
+    title: "Infrastructure & MLOps",
     technologies: [
-      { name: "Kubernetes", description: "Container orchestration for scalable deployments" },
-      { name: "Docker", description: "Containerization for consistent environments" },
-      { name: "NVIDIA CUDA", description: "GPU computing platform for accelerated training" },
-      { name: "MLflow", description: "Platform for ML lifecycle management" },
+      { name: "Kubernetes", description: "Container orchestration for scalable vision deployments" },
+      { name: "Docker", description: "Containerization for reproducible vision pipelines" },
+      { name: "Triton Server", description: "NVIDIA's high-performance model serving" },
+      { name: "MLflow", description: "End-to-end vision model lifecycle management" },
     ],
   },
 ];
@@ -45,10 +45,10 @@ const TechnologiesPage = () => {
   return (
     <>
       <Helmet>
-        <title>AI Technologies - TensorFlow, PyTorch, GPT & More | Aucess</title>
+        <title>Computer Vision Technologies - OpenCV, PyTorch, YOLO & More | Aucess</title>
         <meta
           name="description"
-          content="Discover the cutting-edge AI technologies we use including TensorFlow, PyTorch, GPT models, cloud platforms, and more."
+          content="Discover the cutting-edge computer vision technologies we use including OpenCV, PyTorch, YOLO, SAM, TensorRT, and more."
         />
       </Helmet>
       <Layout>
@@ -63,11 +63,11 @@ const TechnologiesPage = () => {
               className="max-w-3xl mx-auto text-center"
             >
               <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-                Our <span className="text-gradient">Technologies</span>
+                Our <span className="text-gradient">Vision Stack</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                We leverage the most advanced AI frameworks, platforms, and tools to deliver
-                exceptional results for our clients.
+                We combine the most advanced computer vision frameworks, models, and accelerators to ship
+                fast, reliable, production-grade vision systems.
               </p>
             </motion.div>
           </div>
@@ -77,7 +77,7 @@ const TechnologiesPage = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="space-y-16">
-              {techCategories.map((category, categoryIndex) => (
+              {techCategories.map((category) => (
                 <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -131,9 +131,9 @@ const TechnologiesPage = () => {
               </h2>
               <div className="grid md:grid-cols-3 gap-8 mt-12">
                 {[
-                  { title: "Performance", desc: "Industry-leading speed and efficiency" },
-                  { title: "Scalability", desc: "Grows seamlessly with your business" },
-                  { title: "Security", desc: "Enterprise-grade protection built-in" },
+                  { title: "Real-time Performance", desc: "Optimized for low-latency inference at the edge or cloud" },
+                  { title: "Scalability", desc: "From a single camera to thousands of streams" },
+                  { title: "Accuracy", desc: "State-of-the-art models tuned to your domain" },
                 ].map((item) => (
                   <div key={item.title} className="p-6 rounded-2xl glass">
                     <h3 className="font-display text-xl font-semibold text-gradient mb-2">
