@@ -1,32 +1,30 @@
 import { motion } from "framer-motion";
-import {
-  Car,
-  ShoppingBag,
-  Zap,
-  HeartPulse,
-  Factory,
-  Plane,
-  Wrench,
-  Film,
-  Store,
-  Bot,
-  Truck,
-  Warehouse,
-} from "lucide-react";
+import automotive from "@/assets/industries/automotive.jpg";
+import consumerGoods from "@/assets/industries/consumer-goods.jpg";
+import energy from "@/assets/industries/energy.jpg";
+import healthcare from "@/assets/industries/healthcare.jpg";
+import industrial from "@/assets/industries/industrial.jpg";
+import aerospace from "@/assets/industries/aerospace.jpg";
+import manufacturing from "@/assets/industries/manufacturing.jpg";
+import media from "@/assets/industries/media.jpg";
+import retail from "@/assets/industries/retail.jpg";
+import robotics from "@/assets/industries/robotics.jpg";
+import transportation from "@/assets/industries/transportation.jpg";
+import warehousing from "@/assets/industries/warehousing.jpg";
 
 const industries = [
-  { name: "Automotive", icon: Car },
-  { name: "Consumer Goods", icon: ShoppingBag },
-  { name: "Energy & Utilities", icon: Zap },
-  { name: "Healthcare & Medicine", icon: HeartPulse },
-  { name: "Industrial Manufacturing", icon: Factory },
-  { name: "Aerospace & Defense", icon: Plane },
-  { name: "Manufacturing", icon: Wrench },
-  { name: "Media & Entertainment", icon: Film },
-  { name: "Retail & Service", icon: Store },
-  { name: "Robotics", icon: Bot },
-  { name: "Transportation", icon: Truck },
-  { name: "Warehousing", icon: Warehouse },
+  { name: "Automotive", image: automotive },
+  { name: "Consumer Goods", image: consumerGoods },
+  { name: "Energy & Utilities", image: energy },
+  { name: "Healthcare & Medicine", image: healthcare },
+  { name: "Industrial Manufacturing", image: industrial },
+  { name: "Aerospace & Defense", image: aerospace },
+  { name: "Manufacturing", image: manufacturing },
+  { name: "Media & Entertainment", image: media },
+  { name: "Retail & Service", image: retail },
+  { name: "Robotics", image: robotics },
+  { name: "Transportation", image: transportation },
+  { name: "Warehousing", image: warehousing },
 ];
 
 const Industries = () => {
@@ -50,23 +48,30 @@ const Industries = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
           {industries.map((industry, index) => (
             <motion.div
               key={industry.name}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.04 }}
+              transition={{ duration: 0.4, delay: (index % 6) * 0.05 }}
               whileHover={{ y: -4 }}
-              className="group relative p-6 rounded-2xl glass gradient-border hover:bg-secondary/40 transition-all duration-300 overflow-hidden"
+              className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-300"
             >
-              <div className="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-glow-secondary/10 blur-2xl group-hover:from-primary/30 transition-all duration-300" />
-              <div className="relative flex flex-col items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-glow-secondary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <industry.icon className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <h3 className="font-display font-semibold text-foreground text-base md:text-lg">
+              <img
+                src={industry.image}
+                alt={`${industry.name} computer vision example`}
+                loading="lazy"
+                width={768}
+                height={512}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              {/* Bottom gradient for label legibility */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+              {/* Label */}
+              <div className="absolute bottom-0 left-0 right-0 p-3">
+                <h3 className="font-display font-semibold text-foreground text-sm md:text-base drop-shadow-lg">
                   {industry.name}
                 </h3>
               </div>
