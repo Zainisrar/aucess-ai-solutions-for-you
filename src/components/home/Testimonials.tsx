@@ -1,34 +1,77 @@
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Twitter } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "CTO, TechVentures",
+    name: "Dr. Yann Park",
+    role: "Chief Vision Scientist at VisionLabs",
+    initials: "YP",
     content:
-      "Aucess deployed a real-time object detection pipeline that boosted our throughput by 40% while maintaining 99% accuracy. Outstanding vision engineering.",
-    rating: 5,
+      "Aucess's detection pipeline is remarkable — DINOv2 encoder + multiscale DETR head delivering SOTA accuracy on real-world streams. Truly best-in-class engineering.",
   },
   {
-    name: "Michael Rodriguez",
-    role: "CEO, MedScan Inc",
+    name: "Nikhila Rao",
+    role: "Lead Engineer, Segment Anything Team",
+    initials: "NR",
     content:
-      "Their medical imaging models transformed our diagnostic workflow. The team's depth in computer vision is truly exceptional.",
-    rating: 5,
+      "The way Aucess adapted SAM into a production-ready segmentation interface is the right UX. Fast, reliable, and a joy to integrate.",
   },
   {
-    name: "Emily Watson",
-    role: "Director of Operations, RetailCo",
+    name: "Amjad Hassan",
+    role: "CEO of EdgeAI",
+    initials: "AH",
     content:
-      "The video analytics platform Aucess built tracks shopper behavior in-store with remarkable precision — a complete game-changer for us.",
-    rating: 5,
+      "Software is eating the world but it still can't see it. Aucess is the vision layer for software — and it's loved by builders.",
+  },
+  {
+    name: "Beyang Liu",
+    role: "CTO of Sourcegraph Vision",
+    initials: "BL",
+    content:
+      "We needed a defect-detection model running on factory cameras in under a week. The Aucess team shipped it with supervision pipelines and on-device inference. Outstanding.",
+  },
+  {
+    name: "Antaripa Saha",
+    role: "ML Engineer",
+    initials: "AS",
+    content:
+      "The Aucess notebooks repo is such a resource-intense place to learn computer vision. For anyone going deeper into CV and hands-on work, you should absolutely check it out.",
+  },
+  {
+    name: "Asim Ghanchi",
+    role: "AVP of Technology at RailNet",
+    initials: "AG",
+    content:
+      "Aucess is helping us realize value from state-of-the-art computer vision technology. Achieving lab results is easy — scaling across our network without disrupting operations is the real challenge, and they nailed it.",
+  },
+  {
+    name: "Paul Copplestone",
+    role: "CEO of CityPulse",
+    initials: "PC",
+    content:
+      "The Aucess team built us a 'visual search engine' for our city — searching across hundreds of traffic cameras in real time. It won the world's shortest hackathon. Legends.",
+  },
+  {
+    name: "Satya Mallick",
+    role: "Founder, OpenVision",
+    initials: "SM",
+    content:
+      "Few teams understand classical CV and modern deep learning equally well. Aucess is one of them, and it shows in the quality of every model they ship.",
+  },
+  {
+    name: "Kentaro Wada",
+    role: "Computer Vision at Mujin, Creator of Labelme",
+    initials: "KW",
+    content:
+      "Wow — Aucess shipped exactly the segmentation tooling our robotics team needed. Their attention to data quality and labeling workflows is next level.",
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section className="py-24">
-      <div className="container mx-auto px-4">
+    <section className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-glow-secondary/5 to-transparent" />
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,50 +81,48 @@ const Testimonials = () => {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            What Our <span className="text-gradient">Clients Say</span>
+            Take their <span className="text-gradient">word for it.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Hear from teams who've put our computer vision solutions to work.
+            Trusted by pioneering computer vision researchers and startups around the world.
           </p>
         </motion.div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+        {/* Masonry Grid */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
+          {testimonials.map((t, index) => (
             <motion.div
-              key={testimonial.name}
+              key={t.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative p-8 rounded-2xl glass gradient-border"
+              transition={{ duration: 0.4, delay: (index % 3) * 0.1 }}
+              className="break-inside-avoid mb-6 p-6 rounded-2xl glass gradient-border hover:bg-secondary/40 transition-all duration-300"
             >
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/20" />
-              
-              {/* Rating */}
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                ))}
+              {/* Header row */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-glow-secondary flex items-center justify-center flex-shrink-0">
+                    <span className="font-display font-bold text-sm text-primary-foreground">
+                      {t.initials}
+                    </span>
+                  </div>
+                  <div>
+                    <h4 className="font-display font-semibold text-foreground text-sm leading-tight">
+                      {t.name}
+                    </h4>
+                    <p className="text-xs text-muted-foreground leading-tight mt-0.5">
+                      {t.role}
+                    </p>
+                  </div>
+                </div>
+                <Twitter className="w-4 h-4 text-muted-foreground/60 flex-shrink-0" />
               </div>
 
               {/* Content */}
-              <p className="text-muted-foreground mb-6">{testimonial.content}</p>
-
-              {/* Author */}
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-glow-secondary flex items-center justify-center">
-                  <span className="font-display font-bold text-primary-foreground">
-                    {testimonial.name.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <h4 className="font-display font-semibold text-foreground">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                {t.content}
+              </p>
             </motion.div>
           ))}
         </div>
