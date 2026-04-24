@@ -59,8 +59,8 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
-              See the World with{" "}
-              <span className="text-gradient">Intelligent Vision</span>
+              We Solve Your{" "}
+              <span className="text-gradient">Computer Vision Problems</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -70,8 +70,9 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground mb-8"
             >
-              Aucess delivers state-of-the-art computer vision solutions that detect,
-              recognize, and analyze visual data to power smarter decisions.
+              Aucess is a dedicated computer vision company. From detection and segmentation
+              to video analytics, we build the solutions that solve your toughest visual
+              challenges — get in touch and let's solve yours.
             </motion.p>
 
             {/* CTAs */}

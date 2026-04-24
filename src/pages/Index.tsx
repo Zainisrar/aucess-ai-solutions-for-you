@@ -3,7 +3,6 @@ import Layout from "@/components/layout/Layout";
 import Hero from "@/components/home/Hero";
 import Services from "@/components/home/Services";
 import Industries from "@/components/home/Industries";
-import Technologies from "@/components/home/Technologies";
 import Testimonials from "@/components/home/Testimonials";
 import CTA from "@/components/home/CTA";
 
@@ -11,17 +10,16 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Aucess - Computer Vision Solutions for Modern Business</title>
+        <title>Aucess - We Solve Your Computer Vision Problems</title>
         <meta
           name="description"
-          content="Aucess delivers cutting-edge computer vision solutions: object detection, facial recognition, image segmentation, video analytics, quality inspection, and more."
+          content="Aucess is a computer vision company helping businesses solve real-world vision problems — from object detection to video analytics. Get in touch and let's solve yours."
         />
       </Helmet>
       <Layout>
         <Hero />
         <Services />
         <Industries />
-        <Technologies />
         <Testimonials />
         <CTA />
       </Layout>
